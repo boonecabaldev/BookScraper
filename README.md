@@ -1,7 +1,5 @@
-# BookScraper
+# Log
 
-## Like Porno For Psychos
+## 5/22
 
-```text
-https://bookreadfree.com/book/242741
-```
+- Successful download of *The Wasp Factory*
