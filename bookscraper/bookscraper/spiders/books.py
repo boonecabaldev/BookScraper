@@ -6,7 +6,18 @@ import os
 class BooksSpider(scrapy.Spider):
     name = "books"
     allowed_domains = ["bookreadfree.com"]
-    start_urls = ["https://bookreadfree.com/book/132266"]
+    start_urls = [
+        # Wasp Factory
+        "https://bookreadfree.com/book/132266"
+        # Porno For Psychos
+        , "https://bookreadfree.com/book/242741"
+        # Tetatologist
+        , "https://bookreadfree.com/book/251503"
+        # The Black Train
+        , "https://bookreadfree.com/book/426333"
+        # Mangled Meat
+        , "https://bookreadfree.com/book/497228"
+        ]
 
     def parse(self, response):
         title = response.xpath("//div[@class='d']//b[@class='t']/text()").extract_first()
