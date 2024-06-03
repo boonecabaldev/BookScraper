@@ -28,6 +28,32 @@ https://bookreadfree.com/book/426333
 https://bookreadfree.com/book/497228
 ```
 
+### Terra Insanus
+
+```text
+"https://bookreadfree.com/book/195883"
+```
+
+### Bullet Through Your Face
+
+```text
+"https://bookreadfree.com/book/371136"
+```
+
+### "The Haunter Of The Threshold"
+
+```text
+"https://bookreadfree.com/book/477396"
+```
+
+### Header 2
+
+```text
+"https://bookreadfree.com/book/511045"
+```
+
+## Other Authors
+
 ### The Wasp Factory
 
 ```text
