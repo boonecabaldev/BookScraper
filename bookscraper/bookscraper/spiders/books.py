@@ -10,13 +10,21 @@ class BooksSpider(scrapy.Spider):
         # Wasp Factory
         "https://bookreadfree.com/book/132266"
         # Porno For Psychos
-        , "https://bookreadfree.com/book/242741"
+        #, "https://bookreadfree.com/book/242741"
         # Tetatologist
-        , "https://bookreadfree.com/book/251503"
+        #, "https://bookreadfree.com/book/251503"
         # The Black Train
-        , "https://bookreadfree.com/book/426333"
+        #, "https://bookreadfree.com/book/426333"
         # Mangled Meat
-        , "https://bookreadfree.com/book/497228"
+        #, "https://bookreadfree.com/book/497228"
+        # Terra Insanus
+        #, "https://bookreadfree.com/book/195883"
+        # Bullet Through Your Face
+        #, "https://bookreadfree.com/book/371136"
+        # "The Haunter Of The Threshold"
+        #, "https://bookreadfree.com/book/477396"
+        # Header 2
+        , "https://bookreadfree.com/book/511045"
         ]
 
     def parse(self, response):
