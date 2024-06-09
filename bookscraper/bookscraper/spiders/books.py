@@ -7,29 +7,44 @@ class BooksSpider(scrapy.Spider):
     name = "books"
     allowed_domains = ["bookreadfree.com"]
     start_urls = [
+        # Stormrage
+          "https://bookreadfree.com/all/334520"
+        # The Shattering
+        , "https://bookreadfree.com/all/508523"
+        # Shadows Rising
+        , "https://bookreadfree.com/all/62341"
+        # World of Warcraft: Vol'jin: Shadows of the Horde
+        , "https://bookreadfree.com/all/203708"
+        # World of Warcraft: War Crimes
+        , "https://bookreadfree.com/all/152886"
+        # Jaina Proudmoore: Tides of War
+        , "https://bookreadfree.com/all/316405"
+        # Before the Storm
+        , "https://bookreadfree.com/all/406080"
+        
         # Wasp Factory
-        "https://bookreadfree.com/book/132266"
+        , "https://bookreadfree.com/all/132266"
         # Porno For Psychos
         , "https://bookreadfree.com/book/242741"
         # Tetatologist
         , "https://bookreadfree.com/book/251503"
         # The Black Train
-        , "https://bookreadfree.com/book/426333"
+        , "https://bookreadfree.com/all/426333"
         # Mangled Meat
         , "https://bookreadfree.com/book/497228"
         # Terra Insanus
         , "https://bookreadfree.com/book/195883"
         # Bullet Through Your Face
-        , "https://bookreadfree.com/book/371136"
+        , "https://bookreadfree.com/all/371136"
         # "The Haunter Of The Threshold"
-        , "https://bookreadfree.com/book/477396"
+        , "https://bookreadfree.com/all/477396"
         # Header 2
-        , "https://bookreadfree.com/book/511045"
+        , "https://bookreadfree.com/all/511045"
         ]
 
     def parse(self, response):
-        title = response.xpath("//div[@class='d']//b[@class='t']/text()").extract_first()
-        urls = response.xpath("//ul[@class='l']//li//a/@href").extract()
+        title = response.xpath("//article[@class='h']//div[@class='con']//b[@class='t']/text()").extract_first()
+        urls = response.xpath("//div[@class='l']//a/@href").extract()
         print("Title: ", title)
         print("URLs: ", urls)
         count = 0
@@ -47,7 +62,7 @@ class BooksSpider(scrapy.Spider):
             first_p = '<p>' + re.sub('<br><br>', '</p><p>', str(first_p)) + '</p>'
             html = f"<body style='color: #b1b9c7; background-color: black; max-width: 650px; margin-left: auto; margin-right: auto; font: 1.05rem Arial'>{str(first_p)}</body>"
 
-            dir_name = f"../pages/{title}"
+            dir_name = f"../books/{title}"
             if not os.path.exists(dir_name):
                 os.makedirs(dir_name)
 
